@@ -1,1 +1,8 @@
-name: testing
+name: My First Github Action
+on: [push]
+jobs:
+    print-hello-world:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo 'hello World'
+            - run: echo 'codedamn is the Best'
