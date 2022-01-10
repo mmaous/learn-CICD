@@ -1,8 +1,16 @@
-name: My First Github Action
+name: My Second Github Action
 on: [push]
 jobs:
-    print-hello-world:
+    build-app:
         runs-on: ubuntu-latest
         steps:
-            - run: echo 'hello World'
-            - run: echo 'codedamn is the Best'
+            - uses: action/checkout@v2
+            - uses: action/setup-node@v2
+                with:
+                    node-version: '14.01.0'
+            - name: Install node_modules
+                run: yarn
+            - name: Build the project
+                run: yarn build
+            - name: Setup finished
+                run: echo 'Hurray'
