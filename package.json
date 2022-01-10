@@ -1,6 +1,7 @@
 {
         "scripts": {
-                "start": "snowpack dev --port 1337 --polyfill-node"
+                "start": "snowpack dev --port 1337 --polyfill-node",
+                "build": "snowpack build"
         },
         "dependencies": {
                 "react": "^18.0.0-alpha-64931821a-20210808",
